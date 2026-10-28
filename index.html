@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b3a">
+  <meta name="description" content="Radio Nueva Celestial 104.5 FM. Una radio de fe, esperanza y bendición para tu hogar.">
+  <title>Radio Nueva Celestial 104.5 FM</title>
+  <link rel="icon" href="logo-celestial.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://play-lh.googleusercontent.com">
+</head>
+<body>
+  <div class="topbar"><span>✦ Una señal de fe, esperanza y amor ✦</span><span id="bolivia-clock">Hora de Bolivia: --:--:--</span></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Radio Nueva Celestial, inicio">
+      <img src="logo-celestial.svg" alt="Logo de Radio Nueva Celestial 104.5 FM" class="brand-logo">
+      <span class="brand-text"><strong>RADIO NUEVA CELESTIAL</strong><small>104.5 FM · La voz de la esperanza</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="main-nav"><a href="#inicio">Inicio</a><a href="#escuchar">Escuchar</a><a href="#programas">Programas</a><a href="#palabra">Palabra de Dios</a><a href="#contacto">Contacto</a></nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+      <div class="hero-copy"><span class="eyebrow">✧ Transmitiendo bendición ✧</span>
+        <h1>Una radio que <em>alimenta tu fe</em></h1>
+        <p>Que la música, la Palabra de Dios y los mensajes de esperanza acompañen cada momento de tu vida.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#escuchar">▶ Escuchar en vivo</a><a class="button button-outline" href="#programas">Conoce nuestros programas</a></div>
+        <div class="live-note"><span class="live-dot"></span> EN VIVO · RADIO NUEVA CELESTIAL 104.5 FM</div>
+      </div>
+      <div class="hero-emblem"><div class="emblem-ring"><img src="logo-celestial.svg" alt="Emblema Radio Nueva Celestial"></div><span>FE · ESPERANZA · AMOR</span><b>104.5 FM</b></div>
+    </section>
+
+    <section class="listen-section section" id="escuchar">
+      <div class="section-heading"><span class="eyebrow">Sintoniza con nosotros</span><h2>Escucha <em>en vivo</em></h2><p>Donde estés, acompáñanos con una programación llena de bendición.</p></div>
+      <div class="player-card"><div class="player-brand"><img src="logo-celestial.svg" alt="Logo de la radio"><div><span class="live-label"><span class="live-dot"></span> TRANSMISIÓN EN VIVO</span><h3>Radio Nueva Celestial</h3><p>104.5 FM · Una voz de esperanza</p></div></div>
+        <audio id="radio-audio" preload="none" crossorigin="anonymous"><source src="https://stream.zeno.fm/3999p3pkxy8uv" type="audio/mpeg">Tu navegador no admite audio HTML5.</audio>
+        <div class="player-controls"><button id="play-button" class="play-button" aria-label="Reproducir radio">▶</button><div class="track-info"><strong id="player-status">Lista para acompañarte</strong><span>Radio Nueva Celestial 104.5 FM</span></div><button id="mute-button" class="icon-button" aria-label="Silenciar">🔊</button><input id="volume" class="volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volumen"></div>
+        <p class="player-hint" id="player-hint">Pulsa reproducir para escuchar la señal en vivo.</p>
+      </div>
+      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.volweb.ceenu&hl=es_BO" target="_blank" rel="noopener noreferrer"><span class="app-icon">▶</span><span><strong>Lleva la radio contigo</strong><small>Descarga nuestra aplicación para Android</small></span><span class="app-arrow">↗</span></a>
+    </section>
+
+    <section class="programs-section section" id="programas"><div class="section-heading"><span class="eyebrow">Programación</span><h2>Un mensaje para <em>cada corazón</em></h2><p>Espacios preparados con amor para fortalecer tu caminar con Dios.</p></div>
+      <div class="program-grid">
+        <article class="program-card card-blue"><div class="program-number">01</div><div class="program-symbol">✦</div><h3>Llamados para Triunfar</h3><p>Inspiración y palabra para avanzar con fe hacia el propósito que Dios tiene para ti.</p><span class="program-tag">Motivación · Fe</span></article>
+        <article class="program-card card-gold"><div class="program-number">02</div><div class="program-symbol">♛</div><h3>Más que Vencedores</h3><p>Recordemos juntos que en Cristo encontramos fuerzas para superar cada desafío.</p><span class="program-tag">Fortaleza · Esperanza</span></article>
+        <article class="program-card card-teal"><div class="program-number">03</div><div class="program-symbol">♡</div><h3>Fe en Acción</h3><p>Una invitación a vivir nuestra fe con amor, servicio y buenas obras cada día.</p><span class="program-tag">Vida cristiana · Servicio</span></article>
+        <article class="program-card card-purple"><div class="program-number">04</div><div class="program-symbol">♫</div><h3>Noche de Alabanzas de Júbilo y Gozo</h3><p>Un tiempo especial para alabar, agradecer y levantar el corazón en adoración.</p><span class="program-tag">Alabanza · Adoración</span></article>
+        <article class="program-card card-coral"><div class="program-number">05</div><div class="program-symbol">⌂</div><h3>Palabras de la Biblia en cada Hogar</h3><p>La Palabra de Dios llegando a las familias para compartir paz, unión y esperanza.</p><span class="program-tag">Familia · Biblia</span></article>
+      </div>
+      <p class="schedule-note">Los horarios de cada programa pueden anunciarse próximamente por nuestros canales oficiales.</p>
+    </section>
+
+    <section class="verse-section" id="palabra"><div class="verse-decoration">“</div><div class="verse-content"><span class="eyebrow">Una palabra para tu vida</span><blockquote>Todo lo puedo en Cristo que me fortalece.</blockquote><p class="verse-reference">Filipenses 4:13 · Reina-Valera 1960</p><p class="verse-message">A nuestros hermanos, hermanas y jóvenes: no pierdan la esperanza. Sigan adelante con fe, porque Dios puede darles fuerzas para cada nuevo día.</p></div><div class="verse-spark">✧</div></section>
+
+    <section class="mission-section section"><div class="mission-icon">✧</div><div><span class="eyebrow">Nuestra misión</span><h2>Compartir el amor de Dios, <em>una familia a la vez.</em></h2><p>Radio Nueva Celestial 104.5 FM quiere acompañarte con música cristiana, mensajes que edifican y la verdad de la Palabra de Dios.</p></div></section>
+  </main>
+
+  <footer id="contacto"><div class="footer-brand"><img src="logo-celestial.svg" alt="Logo Radio Nueva Celestial"><div><strong>RADIO NUEVA CELESTIAL</strong><span>104.5 FM</span></div></div><p>Una voz de fe, esperanza y bendición.</p><a href="https://play.google.com/store/apps/details?id=com.volweb.ceenu&hl=es_BO" target="_blank" rel="noopener noreferrer">Nuestra aplicación Android ↗</a><div class="footer-bottom">© <span id="year"></span> Radio Nueva Celestial 104.5 FM · Hecho con fe y amor.</div></footer>
+  <script>
+    const audio = document.getElementById('radio-audio');
+    const playButton = document.getElementById('play-button');
+    const muteButton = document.getElementById('mute-button');
+    const volume = document.getElementById('volume');
+    const status = document.getElementById('player-status');
+    const hint = document.getElementById('player-hint');
+    audio.volume = 0.8;
+    playButton.addEventListener('click', async () => {
+      if (audio.paused) {
+        status.textContent = 'Conectando con la señal…'; hint.textContent = 'Un momento, estamos intentando conectar.';
+        try { await audio.play(); } catch (e) { status.textContent = 'No se pudo iniciar la señal'; hint.textContent = 'Comprueba tu conexión e inténtalo de nuevo.'; }
+      } else { audio.pause(); }
+    });
+    audio.addEventListener('playing', () => { playButton.textContent = 'Ⅱ'; playButton.setAttribute('aria-label','Pausar radio'); status.textContent = 'Estás escuchando en vivo'; hint.textContent = '¡Gracias por sintonizar Radio Nueva Celestial!'; });
+    audio.addEventListener('pause', () => { playButton.textContent = '▶'; playButton.setAttribute('aria-label','Reproducir radio'); status.textContent = 'Radio en pausa'; });
+    audio.addEventListener('waiting', () => { status.textContent = 'Cargando transmisión…'; });
+    audio.addEventListener('error', () => { status.textContent = 'Señal temporalmente no disponible'; hint.textContent = 'Vuelve a intentarlo en unos instantes.'; });
+    volume.addEventListener('input', () => { audio.volume = Number(volume.value); audio.muted = audio.volume === 0; muteButton.textContent = audio.muted ? '🔇' : '🔊'; });
+    muteButton.addEventListener('click', () => { audio.muted = !audio.muted; muteButton.textContent = audio.muted ? '🔇' : '🔊'; muteButton.setAttribute('aria-label', audio.muted ? 'Activar sonido' : 'Silenciar'); });
+    function updateClock() { document.getElementById('bolivia-clock').textContent = 'Hora de Bolivia: ' + new Intl.DateTimeFormat('es-BO',{timeZone:'America/La_Paz',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date()); }
+    updateClock(); setInterval(updateClock,1000); document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('menu-toggle'); const nav = document.getElementById('main-nav');
+    toggle.addEventListener('click', () => { const open = nav.classList.toggle('nav-open'); toggle.setAttribute('aria-expanded',String(open)); toggle.textContent = open ? '✕' : '☰'; });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('nav-open'); toggle.setAttribute('aria-expanded','false'); toggle.textContent='☰'; }));
+  </script>
+</body>
+</html>
