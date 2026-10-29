@@ -1,37 +1,520 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#071b40">
-  <meta name="description" content="Radio Nueva Celestial 104.5 FM. Una radio de fe, esperanza y bendición para todos los hogares.">
+  <meta name="theme-color" content="#19083d">
+  <meta name="description" content="Radio Nueva Celestial 104.5 FM Yungas. Escucha nuestra señal en vivo, disfruta de nuestros programas y comparte la palabra de Dios.">
   <title>Radio Nueva Celestial 104.5 FM | Yungas</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="https://play-lh.googleusercontent.com/121O4oSTYsB8w1zzU2OgqE0knwiz-Ewm8xrrv_o3oyNT-fXrYHicfbYqUJ_mJKgvgToDLra9ifsOSvFEokVf2N4=w128-h128-rw">
+
+  <style>
+    :root {
+      --fondo: #10072b;
+      --panel: #211047;
+      --blanco: #ffffff;
+      --dorado: #ffd75e;
+      --rosa: #ff4fa3;
+      --violeta: #9b6bff;
+      --verde: #32e6a0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--blanco);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contenedor {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    .barra {
+      background: #190b3a;
+      border-bottom: 1px solid #ffffff20;
+      padding: 14px 0;
+    }
+
+    .barra-interior {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .marca img {
+      width: 55px;
+      height: 55px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--dorado);
+      background: white;
+    }
+
+    .marca-texto {
+      line-height: 1.25;
+    }
+
+    .marca-texto strong {
+      display: block;
+      color: var(--dorado);
+      font-size: 16px;
+    }
+
+    .marca-texto span {
+      font-size: 12px;
+      color: #e3d8ff;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: bold;
+      color: #f0eaff;
+    }
+
+    nav a:hover {
+      color: var(--dorado);
+    }
+
+    .portada {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 76px 0 65px;
+      background:
+        radial-gradient(ellipse at 15% 15%, #8b35e655, transparent 42%),
+        radial-gradient(ellipse at 85% 70%, #ff3c9b40, transparent 38%),
+        linear-gradient(135deg, #180838, #351064 55%, #19072e);
+    }
+
+    .etiqueta {
+      display: inline-block;
+      border: 1px solid #ffd75e80;
+      color: var(--dorado);
+      background: #ffd75e12;
+      border-radius: 30px;
+      padding: 7px 15px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .portada h1 {
+      max-width: 850px;
+      margin: 0 auto 12px;
+      font-size: clamp(32px, 6vw, 62px);
+      line-height: 1.12;
+      font-weight: 900;
+      text-shadow: 0 3px 25px #00000035;
+    }
+
+    .portada h1 span {
+      color: var(--dorado);
+    }
+
+    .portada p {
+      max-width: 650px;
+      margin: 15px auto 25px;
+      color: #eee5ff;
+      font-size: 17px;
+    }
+
+    .botones {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 21px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: transform .2s, filter .2s;
+    }
+
+    .boton:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .boton-dorado {
+      background: var(--dorado);
+      color: #25113b;
+    }
+
+    .boton-whatsapp {
+      background: #20ce76;
+      color: #082b1b;
+    }
+
+    .boton-borde {
+      border: 1px solid #ffffff80;
+      color: white;
+    }
+
+    section {
+      padding: 58px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .titulo-seccion {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .titulo-seccion .mini {
+      color: var(--rosa);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .titulo-seccion h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.2;
+      margin-top: 5px;
+    }
+
+    .titulo-seccion p {
+      color: #cfc2ec;
+      margin-top: 10px;
+    }
+
+    .en-vivo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      gap: 22px;
+    }
+
+    .reproductor,
+    .reloj {
+      border-radius: 22px;
+      padding: 27px;
+      background: linear-gradient(145deg, #2a1453, #1d103d);
+      border: 1px solid #ffffff18;
+      box-shadow: 0 12px 35px #00000020;
+    }
+
+    .estado {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--verde);
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .punto {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--verde);
+      box-shadow: 0 0 12px var(--verde);
+    }
+
+    .reproductor h3,
+    .reloj h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .reproductor p,
+    .reloj p {
+      color: #d7cbed;
+      font-size: 14px;
+    }
+
+    audio {
+      display: block;
+      width: 100%;
+      margin: 23px 0 12px;
+    }
+
+    .nota {
+      font-size: 12px !important;
+      color: #bcaed7 !important;
+    }
+
+    .hora {
+      font-size: clamp(36px, 6vw, 54px);
+      font-weight: 900;
+      color: var(--dorado);
+      line-height: 1.3;
+      margin: 14px 0 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .fecha {
+      font-size: 15px;
+      color: #f0e7ff;
+      text-transform: capitalize;
+    }
+
+    .franja {
+      background: linear-gradient(90deg, #6c36d9, #bc3eae, #ed568e);
+      padding: 23px 0;
+      text-align: center;
+    }
+
+    .franja p {
+      font-size: clamp(17px, 3vw, 24px);
+      font-weight: bold;
+    }
+
+    .franja span {
+      color: #ffe36e;
+    }
+
+    .programas-fondo {
+      background: #170b32;
+    }
+
+    .programas {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 19px;
+    }
+
+    .programa {
+      position: relative;
+      overflow: hidden;
+      min-height: 205px;
+      padding: 24px;
+      border-radius: 20px;
+      color: white;
+      box-shadow: 0 10px 25px #00000020;
+      transition: transform .2s;
+    }
+
+    .programa:hover {
+      transform: translateY(-5px);
+    }
+
+    .programa .numero {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: bold;
+      background: #ffffff25;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+
+    .programa h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .programa p {
+      color: #ffffffed;
+      font-size: 14px;
+    }
+
+    .programa .decoracion {
+      position: absolute;
+      right: 12px;
+      bottom: -28px;
+      font-size: 95px;
+      opacity: .14;
+      pointer-events: none;
+    }
+
+    .p1 {
+      background: linear-gradient(135deg, #ff4f94, #c526a6);
+    }
+
+    .p2 {
+      background: linear-gradient(135deg, #7049ee, #4025b9);
+    }
+
+    .p3 {
+      background: linear-gradient(135deg, #00bfa6, #087d94);
+    }
+
+    .p4 {
+      background: linear-gradient(135deg, #f5a623, #e85c37);
+    }
+
+    .p5 {
+      background: linear-gradient(135deg, #3188ef, #5145ce);
+    }
+
+    .versiculo {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, #57319b65, transparent 70%),
+        #211043;
+    }
+
+    .versiculo .comillas {
+      color: var(--dorado);
+      font-size: 54px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .versiculo blockquote {
+      max-width: 760px;
+      margin: 10px auto;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: bold;
+    }
+
+    .versiculo cite {
+      display: block;
+      margin-top: 12px;
+      color: var(--dorado);
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    .contacto {
+      text-align: center;
+    }
+
+    .contacto-panel {
+      max-width: 760px;
+      margin: auto;
+      padding: 34px 25px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #39206b, #241047);
+      border: 1px solid #ffffff18;
+    }
+
+    .contacto-panel h2 {
+      font-size: clamp(26px, 4vw, 36px);
+      margin-bottom: 10px;
+    }
+
+    .contacto-panel p {
+      color: #e0d5f5;
+      margin-bottom: 18px;
+    }
+
+    footer {
+      background: #0a041b;
+      padding: 25px 0;
+      text-align: center;
+      color: #bdb0d5;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--dorado);
+    }
+
+    @media (max-width: 760px) {
+      .barra-interior {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .portada {
+        padding: 58px 0 48px;
+      }
+
+      .en-vivo {
+        grid-template-columns: 1fr;
+      }
+
+      .programas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      section {
+        padding: 44px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .programas {
+        grid-template-columns: 1fr;
+      }
+
+      .programa {
+        min-height: 175px;
+      }
+
+      .marca-texto strong {
+        font-size: 14px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .reproductor,
+      .reloj {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="Inicio">
+  <header class="barra">
+    <div class="contenedor barra-interior">
+      <a class="marca" href="#inicio" aria-label="Inicio de Radio Nueva Celestial">
         <img
-          class="logo"
           src="https://play-lh.googleusercontent.com/121O4oSTYsB8w1zzU2OgqE0knwiz-Ewm8xrrv_o3oyNT-fXrYHicfbYqUJ_mJKgvgToDLra9ifsOSvFEokVf2N4=w240-h240-rw"
-          alt="Logo oficial de Radio Nueva Celestial"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
-        <span class="logo-fallback">✦</span>
-        <span class="brand-text">
+          alt="Logo de Radio Nueva Celestial"
+          onerror="this.style.display='none'">
+        <span class="marca-texto">
           <strong>RADIO NUEVA CELESTIAL</strong>
-          <small>104.5 FM · YUNGAS</small>
+          <span>104.5 FM · Yungas, Bolivia</span>
         </span>
       </a>
 
-      <button class="menu-button" id="menuButton" aria-label="Abrir menú">☰</button>
-
-      <nav id="menu" class="menu">
+      <nav aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
-        <a href="#radio">Escúchanos</a>
+        <a href="#envivo">En vivo</a>
         <a href="#programas">Programas</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -39,268 +522,194 @@
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="hero-glow"></div>
-      <div class="container hero-content">
-        <span class="eyebrow">✦ UNA VOZ DE FE Y ESPERANZA ✦</span>
+    <section class="portada" id="inicio">
+      <div class="contenedor">
+        <span class="etiqueta">✦ UNA VOZ DE ESPERANZA ✦</span>
         <h1>Radio Nueva <span>Celestial</span></h1>
-        <p class="frequency">104.5 FM · Yungas, Bolivia</p>
-        <p class="hero-description">
-          Llevando la palabra de Dios, alabanza y esperanza a cada corazón
-          y a cada hogar.
+        <p>
+          104.5 FM Yungas. Una radio para fortalecer tu fe,
+          llenar tu hogar de esperanza y compartir el amor de Dios.
         </p>
 
-        <div class="hero-actions">
-          <a class="button button-gold" href="#radio">▶ Escuchar en vivo</a>
-          <a class="button button-outline"
-             href="https://play.google.com/store/apps/details?id=com.volweb.ceenu&hl=es_BO"
-             target="_blank" rel="noopener">
-            Descargar aplicación
-          </a>
-        </div>
-
-        <div class="live-indicator">
-          <span class="live-dot"></span> SINTONIZA NUESTRA SEÑAL
+        <div class="botones">
+          <a class="boton boton-dorado" href="#envivo">▶ Escuchar en vivo</a>
+          <a class="boton boton-borde" href="#programas">Nuestra programación</a>
         </div>
       </div>
     </section>
 
-    <section class="radio-section" id="radio">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">ESTAMOS CONTIGO</span>
-          <h2>Escúchanos <span>en vivo</span></h2>
-          <p>Que la música y la palabra de Dios acompañen tu día.</p>
+    <div class="franja">
+      <div class="contenedor">
+        <p>♪ Música, palabra y esperanza para tu vida. <span>¡Dios te bendiga!</span></p>
+      </div>
+    </div>
+
+    <section id="envivo">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="mini">Conéctate con nosotros</span>
+          <h2>Escúchanos en vivo</h2>
+          <p>La señal de Radio Nueva Celestial, estés donde estés.</p>
         </div>
 
-        <div class="player-card">
-          <div class="player-brand">
-            <img
-              src="https://play-lh.googleusercontent.com/121O4oSTYsB8w1zzU2OgqE0knwiz-Ewm8xrrv_o3oyNT-fXrYHicfbYqUJ_mJKgvgToDLra9ifsOSvFEokVf2N4=w240-h240-rw"
-              alt="Logo de Radio Nueva Celestial"
-              class="player-logo"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
-            >
-            <div class="player-logo-fallback">✦</div>
-            <div>
-              <h3>Radio Nueva Celestial</h3>
-              <p>104.5 FM · Transmisión por internet</p>
-              <span class="on-air"><span class="live-dot"></span> RADIO EN VIVO</span>
+        <div class="en-vivo">
+          <div class="reproductor">
+            <div class="estado">
+              <span class="punto"></span>
+              SEÑAL DE RADIO POR INTERNET
             </div>
+            <h3>Radio Nueva Celestial</h3>
+            <p>104.5 FM · Yungas, Bolivia</p>
+
+            <audio controls preload="none">
+              <source src="https://stream.zeno.fm/3999p3pkxy8uv" type="audio/mpeg">
+              Tu navegador no puede reproducir este audio.
+            </audio>
+
+            <p class="nota">
+              Pulsa reproducir para escuchar. Si no hay señal, inténtalo nuevamente más tarde.
+            </p>
           </div>
 
-          <audio id="radioAudio" preload="none"
-            src="https://stream.zeno.fm/3999p3pkxy8uv"></audio>
-
-          <div class="player-controls">
-            <button id="playButton" class="play-button" aria-label="Reproducir radio">▶</button>
-            <div class="player-info">
-              <strong id="playerStatus">Escucha nuestra señal</strong>
-              <span id="playerMessage">Presiona reproducir para comenzar</span>
-            </div>
-            <div class="volume-control">
-              <label for="volume">Volumen</label>
-              <input id="volume" type="range" min="0" max="1" step="0.05" value="0.8">
-            </div>
+          <div class="reloj">
+            <h3>🕒 Hora de Bolivia</h3>
+            <p>Hora local de La Paz y los Yungas</p>
+            <div class="hora" id="hora">--:--:--</div>
+            <div class="fecha" id="fecha">Cargando fecha...</div>
+            <p style="margin-top:18px">🇧🇴 Bolivia · Zona horaria America/La_Paz</p>
           </div>
-          <p id="audioError" class="audio-error" role="status"></p>
-        </div>
-
-        <div class="clock-card">
-          <span>🕒 Hora oficial de Bolivia</span>
-          <strong id="boliviaClock">--:--:--</strong>
-          <small id="boliviaDate">Cargando fecha...</small>
         </div>
       </div>
     </section>
 
-    <section class="programs-section" id="programas">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">PROGRAMACIÓN</span>
-          <h2>Programas que <span>bendicen tu vida</span></h2>
-          <p>Espacios preparados con amor para toda la familia.</p>
+    <section class="programas-fondo" id="programas">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="mini">Fe que nos une</span>
+          <h2>Nuestra programación</h2>
+          <p>Programas para acompañarte y edificar tu vida espiritual.</p>
         </div>
 
-        <div class="program-grid">
-          <article class="program-card">
-            <div class="program-icon">🌟</div>
-            <span class="program-number">PROGRAMA 01</span>
+        <div class="programas">
+          <article class="programa p1">
+            <span class="numero">PROGRAMA 01</span>
             <h3>Llamados para Triunfar</h3>
-            <p>Palabras de motivación y fe para avanzar con Dios y cumplir su propósito.</p>
+            <p>Mensajes de fe para avanzar con esperanza y confianza en Dios.</p>
+            <span class="decoracion" aria-hidden="true">✦</span>
           </article>
 
-          <article class="program-card">
-            <div class="program-icon">🛡️</div>
-            <span class="program-number">PROGRAMA 02</span>
+          <article class="programa p2">
+            <span class="numero">PROGRAMA 02</span>
             <h3>Más que Vencedores</h3>
-            <p>Recordemos juntos que en Cristo encontramos fuerza para superar las dificultades.</p>
+            <p>Palabras que fortalecen el corazón y renuevan tus fuerzas.</p>
+            <span class="decoracion" aria-hidden="true">♛</span>
           </article>
 
-          <article class="program-card">
-            <div class="program-icon">🙌</div>
-            <span class="program-number">PROGRAMA 03</span>
+          <article class="programa p3">
+            <span class="numero">PROGRAMA 03</span>
             <h3>Fe en Acción</h3>
-            <p>Una invitación a vivir nuestra fe cada día con amor, servicio y esperanza.</p>
+            <p>Vive tu fe cada día y comparte el amor de Cristo con los demás.</p>
+            <span class="decoracion" aria-hidden="true">✝</span>
           </article>
 
-          <article class="program-card">
-            <div class="program-icon">🎶</div>
-            <span class="program-number">PROGRAMA 04</span>
+          <article class="programa p4">
+            <span class="numero">PROGRAMA 04</span>
             <h3>Noche de Alabanzas de Júbilo y Gozo</h3>
-            <p>Un tiempo especial para alabar, agradecer y gozarnos en la presencia del Señor.</p>
+            <p>Un espacio para alabar, adorar y elevar el corazón a Dios.</p>
+            <span class="decoracion" aria-hidden="true">♫</span>
           </article>
 
-          <article class="program-card">
-            <div class="program-icon">📖</div>
-            <span class="program-number">PROGRAMA 05</span>
+          <article class="programa p5">
+            <span class="numero">PROGRAMA 05</span>
             <h3>Palabras de la Biblia en cada Hogar</h3>
-            <p>La Palabra de Dios entrando en las familias para fortalecer la fe y la unidad.</p>
+            <p>La Palabra de Dios acompañando a cada familia.</p>
+            <span class="decoracion" aria-hidden="true">✧</span>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="verse-section">
-      <div class="container verse-content">
-        <div class="verse-symbol">“</div>
-        <span class="eyebrow">PALABRA DE ESPERANZA</span>
+    <section class="versiculo">
+      <div class="contenedor">
+        <div class="comillas" aria-hidden="true">“</div>
         <blockquote>
-          “Todo lo puedo en Cristo que me fortalece.”
+          Todo lo puedo en Cristo que me fortalece.
         </blockquote>
-        <p class="verse-reference">FILIPENSES 4:13</p>
-        <p class="verse-message">
-          A nuestros hermanos, hermanas y jóvenes: sigamos adelante con fe.
-          Dios no nos abandona; en Él encontramos fortaleza para cada nuevo día.
-        </p>
+        <cite>Filipenses 4:13</cite>
       </div>
     </section>
 
-    <section class="contact-section" id="contacto">
-      <div class="container contact-box">
-        <div>
-          <span class="eyebrow">ESTAMOS PARA SERVIRTE</span>
-          <h2>¡Conéctate con <span>nosotros!</span></h2>
-          <p>Escríbenos por WhatsApp. Será una alegría estar en contacto contigo.</p>
+    <section class="contacto" id="contacto">
+      <div class="contenedor">
+        <div class="contacto-panel">
+          <h2>¡Estamos para escucharte!</h2>
+          <p>
+            Escríbenos, comparte tus testimonios y mantente en contacto
+            con Radio Nueva Celestial 104.5 FM.
+          </p>
+
+          <div class="botones">
+            <a
+              class="boton boton-whatsapp"
+              href="https://wa.me/59169716330"
+              target="_blank"
+              rel="noopener noreferrer">
+              ☎ Contactar por WhatsApp
+            </a>
+
+            <a
+              class="boton boton-dorado"
+              href="https://play.google.com/store/apps/details?id=com.volweb.ceenu&hl=es_BO"
+              target="_blank"
+              rel="noopener noreferrer">
+              ▶ Descargar nuestra app
+            </a>
+          </div>
         </div>
-        <a class="button whatsapp-button"
-           href="https://wa.me/59169716330"
-           target="_blank" rel="noopener">
-          <span class="whatsapp-icon">◉</span>
-          WhatsApp: +591 69716330
-        </a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="footer-star">✦</span>
-        <div>
-          <strong>Radio Nueva Celestial 104.5 FM</strong>
-          <p>Una radio de fe, esperanza y bendición.</p>
-        </div>
-      </div>
-      <p class="copyright">© <span id="year"></span> Radio Nueva Celestial. Todos los derechos reservados.</p>
+  <footer>
+    <div class="contenedor">
+      <p><strong>Radio Nueva Celestial 104.5 FM Yungas</strong></p>
+      <p>Una voz de esperanza para tu vida.</p>
+      <p>© <span id="anio"></span> Radio Nueva Celestial. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script>
-    const audio = document.getElementById("radioAudio");
-    const playButton = document.getElementById("playButton");
-    const playerStatus = document.getElementById("playerStatus");
-    const playerMessage = document.getElementById("playerMessage");
-    const audioError = document.getElementById("audioError");
-    const volume = document.getElementById("volume");
+    function actualizarReloj() {
+      const ahora = new Date();
 
-    audio.volume = Number(volume.value);
-
-    playButton.addEventListener("click", async () => {
-      audioError.textContent = "";
-
-      if (audio.paused) {
-        playerStatus.textContent = "Conectando con la radio...";
-        playerMessage.textContent = "Por favor, espera un momento";
-
-        try {
-          await audio.play();
-        } catch (error) {
-          playerStatus.textContent = "No se pudo iniciar la transmisión";
-          playerMessage.textContent = "Intenta nuevamente en unos segundos";
-          audioError.textContent =
-            "No se pudo reproducir la señal. Comprueba tu conexión a internet e inténtalo otra vez.";
-        }
-      } else {
-        audio.pause();
-      }
-    });
-
-    audio.addEventListener("playing", () => {
-      playButton.textContent = "Ⅱ";
-      playButton.setAttribute("aria-label", "Pausar radio");
-      playerStatus.textContent = "Estás escuchando Radio Nueva Celestial";
-      playerMessage.textContent = "Transmitiendo en vivo · 104.5 FM";
-      audioError.textContent = "";
-    });
-
-    audio.addEventListener("pause", () => {
-      playButton.textContent = "▶";
-      playButton.setAttribute("aria-label", "Reproducir radio");
-      playerStatus.textContent = "Radio en pausa";
-      playerMessage.textContent = "Presiona reproducir para continuar";
-    });
-
-    audio.addEventListener("error", () => {
-      playerStatus.textContent = "Señal temporalmente no disponible";
-      playerMessage.textContent = "Vuelve a intentarlo más tarde";
-      audioError.textContent =
-        "La señal no pudo cargarse. Puede ser un problema temporal del servicio de transmisión.";
-    });
-
-    volume.addEventListener("input", () => {
-      audio.volume = Number(volume.value);
-      audio.muted = audio.volume === 0;
-    });
-
-    function updateBoliviaClock() {
-      const now = new Date();
-
-      document.getElementById("boliviaClock").textContent =
+      document.getElementById("hora").textContent =
         new Intl.DateTimeFormat("es-BO", {
           timeZone: "America/La_Paz",
           hour: "2-digit",
           minute: "2-digit",
           second: "2-digit",
-          hour12: true
-        }).format(now);
+          hour12: false
+        }).format(ahora);
 
-      document.getElementById("boliviaDate").textContent =
+      document.getElementById("fecha").textContent =
         new Intl.DateTimeFormat("es-BO", {
           timeZone: "America/La_Paz",
           weekday: "long",
-          year: "numeric",
+          day: "numeric",
           month: "long",
-          day: "numeric"
-        }).format(now);
+          year: "numeric"
+        }).format(ahora);
     }
 
-    updateBoliviaClock();
-    setInterval(updateBoliviaClock, 1000);
-    document.getElementById("year").textContent = new Date().getFullYear();
+    actualizarReloj();
+    setInterval(actualizarReloj, 1000);
 
-    const menuButton = document.getElementById("menuButton");
-    const menu = document.getElementById("menu");
-
-    menuButton.addEventListener("click", () => {
-      menu.classList.toggle("menu-open");
-    });
-
-    menu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("menu-open");
-      });
-    });
+    document.getElementById("anio").textContent =
+      new Intl.DateTimeFormat("en", {
+        timeZone: "America/La_Paz",
+        year: "numeric"
+      }).format(new Date());
   </script>
 </body>
 </html>
+
