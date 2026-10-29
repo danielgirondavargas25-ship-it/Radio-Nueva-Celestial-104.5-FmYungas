@@ -3,239 +3,205 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#102c50">
-  <meta name="description" content="Radio Nueva Celestial 104.5 FM Yungas, Bolivia. Escucha música cristiana, mensajes de fe y nuestra programación en vivo.">
-  <title>Radio Nueva Celestial 104.5 FM | Yungas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b24">
+  <meta name="description" content="Radio Nueva Celestial 104.5 FM Yungas, Bolivia. Música cristiana, alabanzas y palabra de Dios en vivo.">
+  <title>Radio Nueva Celestial 104.5 FM | En vivo</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header class="encabezado">
-    <div class="contenedor barra-superior">
-      <a class="identidad" href="#inicio" aria-label="Inicio">
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio">
         <img
-          class="logo"
           src="https://play-lh.googleusercontent.com/121O4oSTYsB8w1zzU2OgqE0knwiz-Ewm8xrrv_o3oyNT-fXrYHicfbYqUJ_mJKgvgToDLra9ifsOSvFEokVf2N4=w240-h240-rw"
-          alt="Logo de Radio Nueva Celestial"
+          alt="Logo Radio Nueva Celestial"
+          class="logo"
           onerror="this.style.display='none'">
-
-        <span class="identidad-texto">
-          <strong>RADIO NUEVA CELESTIAL</strong>
+        <span>
+          <strong>RADIO <em>NUEVA CELESTIAL</em></strong>
           <small>104.5 FM · YUNGAS, BOLIVIA</small>
         </span>
       </a>
-
-      <nav class="navegacion" aria-label="Menú principal">
+      <nav aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
-        <a href="#escuchanos">En vivo</a>
-        <a href="#programacion">Programación</a>
+        <a href="#en-vivo">En vivo</a>
+        <a href="#programas">Programas</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="portada" id="inicio">
-      <div class="cielo-luz luz-uno"></div>
-      <div class="cielo-luz luz-dos"></div>
-
-      <div class="contenedor portada-contenido">
-        <div class="sello">UNA VOZ DE FE Y ESPERANZA</div>
-
-        <p class="sobre-titulo">BIENVENIDOS A NUESTRA CASA</p>
-
+    <section class="hero" id="inicio">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <div class="wrap hero-content">
+        <div class="live-label"><span class="pulse"></span> UNA VOZ DE FE Y ESPERANZA</div>
+        <p class="eyebrow">DESDE LOS YUNGAS PARA EL MUNDO</p>
         <h1>Radio Nueva<br><span>Celestial</span></h1>
-
-        <div class="linea-dorada"></div>
-
-        <p class="descripcion-portada">
-          Llevando esperanza a tu corazón, palabra de Dios a tu hogar
-          y alabanzas para acompañar cada día de tu vida.
+        <p class="hero-description">
+          ¡La señal que ilumina tu día! Alabanzas, palabra de Dios
+          y mensajes de esperanza para tu corazón.
         </p>
-
-        <div class="acciones-portada">
-          <a href="#escuchanos" class="boton boton-dorado">
-            <span aria-hidden="true">▶</span> Escuchar la radio
-          </a>
-
-          <a href="#programacion" class="boton boton-transparente">
-            Descubrir programas
-          </a>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#en-vivo">▶ ESCUCHAR AHORA</a>
+          <a class="btn btn-glass" href="#programas">NUESTRA PROGRAMACIÓN ↓</a>
         </div>
-
-        <div class="frecuencia">
-          <span class="frecuencia-numero">104.5</span>
-          <span class="frecuencia-texto">FM<br>YUNGAS</span>
-        </div>
+        <div class="frequency"><strong>104.5</strong><span>FM<br>YUNGAS</span></div>
       </div>
-
-      <div class="borde-olas" aria-hidden="true"></div>
+      <div class="hero-bottom"></div>
     </section>
 
-    <section class="seccion-en-vivo" id="escuchanos">
-      <div class="contenedor">
-        <div class="encabezado-seccion">
-          <span class="etiqueta-seccion">SINTONÍZANOS</span>
-          <h2>Estamos contigo</h2>
-          <p>Conéctate desde cualquier lugar y comparte nuestra señal.</p>
+    <section class="listen section" id="en-vivo">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="kicker">SINTONIZA · CONÉCTATE · DISFRUTA</span>
+          <h2>¡Estamos <span>en vivo!</span></h2>
+          <p>Tu compañía de fe, dondequiera que estés.</p>
         </div>
 
-        <div class="paneles-en-vivo">
-          <article class="panel-radio">
-            <div class="panel-radio-cabecera">
-              <div class="icono-radio" aria-hidden="true">♫</div>
+        <div class="listen-grid">
+          <article class="player-card">
+            <div class="player-top">
+              <div class="equalizer" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
               <div>
-                <span class="estado-radio">
-                  <span class="punto-verde"></span>
-                  RADIO POR INTERNET
-                </span>
-                <h3>Escucha en vivo</h3>
+                <span class="on-air"><span class="pulse"></span> RADIO ONLINE</span>
+                <h3>Señal en directo</h3>
                 <p>Radio Nueva Celestial · 104.5 FM</p>
               </div>
             </div>
 
-            <div class="separador"></div>
+            <div class="player-art">
+              <div class="player-disc">♫</div>
+              <div>
+                <span class="track-label">ESCUCHA NUESTRA SEÑAL</span>
+                <h4>Fe, música y esperanza</h4>
+                <p>Una bendición para cada momento.</p>
+              </div>
+            </div>
 
-            <audio controls preload="none">
+            <audio id="radio" controls preload="none"
+              aria-label="Reproductor de Radio Nueva Celestial">
               <source src="https://stream.zeno.fm/3999p3pkxy8uv" type="audio/mpeg">
               Tu navegador no puede reproducir este audio.
             </audio>
 
-            <p class="ayuda-audio">
-              Pulsa reproducir para escuchar nuestra señal.
+            <p class="player-help" id="player-status" aria-live="polite">
+              Pulsa ▶ para comenzar a escuchar.
             </p>
+            <div class="player-note">♫ Si no comienza, revisa tu conexión e inténtalo otra vez.</div>
           </article>
 
-          <article class="panel-hora">
-            <div class="icono-reloj" aria-hidden="true">◷</div>
-            <span class="etiqueta-hora">HORA LOCAL</span>
-            <h3>Bolivia</h3>
-            <div class="reloj-digital" id="hora">--:--:--</div>
-            <p class="fecha-local" id="fecha">Cargando fecha...</p>
-            <div class="linea-hora"></div>
-            <p class="zona-horaria">La Paz · América/La_Paz</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="franja-mensaje">
-      <div class="contenedor franja-contenido">
-        <span class="adorno-franja" aria-hidden="true">✦</span>
-        <p>Una radio que transmite <strong>fe, amor y esperanza.</strong></p>
-        <span class="adorno-franja" aria-hidden="true">✦</span>
-      </div>
-    </section>
-
-    <section class="seccion-programacion" id="programacion">
-      <div class="contenedor">
-        <div class="encabezado-seccion">
-          <span class="etiqueta-seccion">NUESTROS ESPACIOS</span>
-          <h2>Programación radial</h2>
-          <p>Mensajes que inspiran, enseñan y fortalecen tu caminar con Dios.</p>
+          <aside class="clock-card">
+            <div class="clock-icon">◷</div>
+            <span class="kicker">TU HORA LOCAL</span>
+            <h3>Bolivia 🇧🇴</h3>
+            <div class="clock" id="hora">--:--:--</div>
+            <p class="date" id="fecha">Cargando fecha...</p>
+            <div class="clock-line"></div>
+            <p class="clock-caption">La Paz · Zona horaria de Bolivia</p>
+            <div class="clock-decoration">✦</div>
+          </aside>
         </div>
 
-        <div class="rejilla-programas">
-          <article class="tarjeta-programa programa-uno">
-            <div class="programa-superior">
-              <span class="numero-programa">01</span>
-              <span class="simbolo-programa" aria-hidden="true">✧</span>
-            </div>
-            <div class="programa-linea"></div>
-            <h3>Llamados para Triunfar</h3>
-            <p>Motivación y palabra de fe para seguir adelante con confianza en Dios.</p>
-            <span class="programa-pie">FE · PROPÓSITO · VICTORIA</span>
-          </article>
-
-          <article class="tarjeta-programa programa-dos">
-            <div class="programa-superior">
-              <span class="numero-programa">02</span>
-              <span class="simbolo-programa" aria-hidden="true">♕</span>
-            </div>
-            <div class="programa-linea"></div>
-            <h3>Más que Vencedores</h3>
-            <p>Un espacio para renovar tus fuerzas y recordar las promesas de Dios.</p>
-            <span class="programa-pie">FUERZA · ESPERANZA · FE</span>
-          </article>
-
-          <article class="tarjeta-programa programa-tres">
-            <div class="programa-superior">
-              <span class="numero-programa">03</span>
-              <span class="simbolo-programa" aria-hidden="true">✝</span>
-            </div>
-            <div class="programa-linea"></div>
-            <h3>Fe en Acción</h3>
-            <p>La fe se demuestra cada día con amor, servicio y buenas acciones.</p>
-            <span class="programa-pie">AMOR · SERVICIO · ACCIÓN</span>
-          </article>
-
-          <article class="tarjeta-programa programa-cuatro">
-            <div class="programa-superior">
-              <span class="numero-programa">04</span>
-              <span class="simbolo-programa" aria-hidden="true">♫</span>
-            </div>
-            <div class="programa-linea"></div>
-            <h3>Noche de Alabanzas de Júbilo y Gozo</h3>
-            <p>Un encuentro musical para alabar al Señor con alegría y gratitud.</p>
-            <span class="programa-pie">ALABANZA · JÚBILO · GOZO</span>
-          </article>
-
-          <article class="tarjeta-programa programa-cinco">
-            <div class="programa-superior">
-              <span class="numero-programa">05</span>
-              <span class="simbolo-programa" aria-hidden="true">▤</span>
-            </div>
-            <div class="programa-linea"></div>
-            <h3>Palabras de la Biblia en cada Hogar</h3>
-            <p>Enseñanzas bíblicas para compartir la Palabra de Dios en familia.</p>
-            <span class="programa-pie">BIBLIA · FAMILIA · PALABRA</span>
-          </article>
-        </div>
-
-        <p class="nota-programacion">
-          Consulta nuestros canales de contacto para conocer los horarios de cada programa.
+        <p class="background-note">
+          <strong>Consejo para Android:</strong> inicia la reproducción y prueba cambiar de aplicación.
+          El navegador puede mantener el audio activo, pero el ahorro de batería o el sistema
+          pueden interrumpirlo. Para reproducción de fondo más fiable, considera nuestra app.
         </p>
       </div>
     </section>
 
-    <section class="seccion-versiculo">
-      <div class="contenedor versiculo-contenido">
-        <span class="versiculo-adorno" aria-hidden="true">“</span>
-        <p class="versiculo-etiqueta">PALABRA QUE NOS FORTALECE</p>
-        <blockquote>
-          Todo lo puedo en Cristo que me fortalece.
-        </blockquote>
+    <section class="banner">
+      <div class="wrap banner-inner">
+        <span>✦</span>
+        <p>Una señal diferente. <strong>Una fe que brilla.</strong></p>
+        <span>✦</span>
+      </div>
+    </section>
+
+    <section class="programs section" id="programas">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="kicker">VOCES QUE INSPIRAN</span>
+          <h2>Nuestra <span>programación</span></h2>
+          <p>Espacios para fortalecer tu fe y llenar tu hogar de bendición.</p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program p-pink">
+            <div class="program-top"><span>PROGRAMA 01</span><b>✦</b></div>
+            <div class="program-rule"></div>
+            <h3>Llamados para Triunfar</h3>
+            <p>Palabras de ánimo para avanzar con propósito, valentía y fe.</p>
+            <div class="program-tag">FE · PROPÓSITO · VICTORIA</div>
+          </article>
+
+          <article class="program p-blue">
+            <div class="program-top"><span>PROGRAMA 02</span><b>♛</b></div>
+            <div class="program-rule"></div>
+            <h3>Más que Vencedores</h3>
+            <p>Renueva tus fuerzas y recuerda las promesas de nuestro Señor.</p>
+            <div class="program-tag">FUERZA · ESPERANZA</div>
+          </article>
+
+          <article class="program p-teal">
+            <div class="program-top"><span>PROGRAMA 03</span><b>✝</b></div>
+            <div class="program-rule"></div>
+            <h3>Fe en Acción</h3>
+            <p>Vive tus creencias con amor, servicio y acciones que bendicen.</p>
+            <div class="program-tag">AMOR · SERVICIO · FE</div>
+          </article>
+
+          <article class="program p-orange">
+            <div class="program-top"><span>PROGRAMA 04</span><b>♫</b></div>
+            <div class="program-rule"></div>
+            <h3>Noche de Alabanzas de Júbilo y Gozo</h3>
+            <p>Un espacio para alabar al Señor con alegría y gratitud.</p>
+            <div class="program-tag">ALABANZA · JÚBILO · GOZO</div>
+          </article>
+
+          <article class="program p-violet">
+            <div class="program-top"><span>PROGRAMA 05</span><b>✧</b></div>
+            <div class="program-rule"></div>
+            <h3>Palabras de la Biblia en cada Hogar</h3>
+            <p>La Palabra de Dios acompañando a las familias cada día.</p>
+            <div class="program-tag">BIBLIA · FAMILIA · VIDA</div>
+          </article>
+        </div>
+        <p class="program-note">Consulta nuestros canales para conocer los horarios de cada programa.</p>
+      </div>
+    </section>
+
+    <section class="verse">
+      <div class="wrap verse-content">
+        <div class="verse-symbol">“</div>
+        <span class="kicker">UNA PROMESA PARA TU VIDA</span>
+        <blockquote>Todo lo puedo en Cristo que me fortalece.</blockquote>
         <cite>FILIPENSES 4:13</cite>
       </div>
     </section>
 
-    <section class="seccion-contacto" id="contacto">
-      <div class="contenedor">
-        <div class="contacto-panel">
-          <div class="contacto-decoracion" aria-hidden="true">✦</div>
-          <span class="etiqueta-seccion">ESTAMOS PARA TI</span>
-          <h2>Conectemos en la fe</h2>
+    <section class="contact section" id="contacto">
+      <div class="wrap">
+        <div class="contact-card">
+          <span class="kicker">NOS ENCANTARÍA SABER DE TI</span>
+          <h2>¡Sigamos conectados!</h2>
           <p>
-            Escríbenos, comparte tus testimonios y lleva Radio Nueva Celestial
-            contigo a través de nuestra aplicación.
+            Comparte tus testimonios, envíanos tus mensajes y lleva
+            Radio Nueva Celestial contigo.
           </p>
-
-          <div class="acciones-contacto">
-            <a
-              class="boton boton-whatsapp"
-              href="https://wa.me/59169716330"
-              target="_blank"
-              rel="noopener noreferrer">
-              <span aria-hidden="true">☏</span> Escríbenos por WhatsApp
+          <div class="contact-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/59169716330"
+              target="_blank" rel="noopener noreferrer">
+              ☎ CONTACTAR POR WHATSAPP
             </a>
-
-            <a
-              class="boton boton-azul"
-              href="https://play.google.com/store/apps/details?id=com.volweb.ceenu&amp;hl=es_BO"
-              target="_blank"
-              rel="noopener noreferrer">
-              Descargar aplicación
+            <a class="btn btn-dark" href="https://play.google.com/store/apps/details?id=com.volweb.ceenu&amp;hl=es_BO"
+              target="_blank" rel="noopener noreferrer">
+              ▶ DESCARGAR LA APP
             </a>
           </div>
         </div>
@@ -243,18 +209,19 @@
     </section>
   </main>
 
-  <footer class="pie-pagina">
-    <div class="contenedor pie-contenido">
-      <a class="pie-marca" href="#inicio">RADIO NUEVA CELESTIAL</a>
+  <footer class="footer">
+    <div class="wrap">
+      <a href="#inicio" class="footer-brand">RADIO NUEVA CELESTIAL</a>
       <p>104.5 FM · Yungas, Bolivia</p>
-      <p>Una voz de fe y esperanza para tu vida.</p>
-      <div class="pie-linea"></div>
+      <p>Una voz de fe, luz y esperanza.</p>
+      <div class="footer-line"></div>
       <small>© <span id="anio"></span> Radio Nueva Celestial. Todos los derechos reservados.</small>
     </div>
   </footer>
 
   <script>
-    function actualizarHora() {
+    // Reloj con la hora real de Bolivia.
+    function actualizarReloj() {
       const ahora = new Date();
 
       document.getElementById("hora").textContent =
@@ -276,15 +243,67 @@
         }).format(ahora);
     }
 
-    actualizarHora();
-    setInterval(actualizarHora, 1000);
+    actualizarReloj();
+    setInterval(actualizarReloj, 1000);
 
     document.getElementById("anio").textContent =
       new Intl.DateTimeFormat("en", {
         timeZone: "America/La_Paz",
         year: "numeric"
       }).format(new Date());
+
+    // Controles multimedia para navegadores compatibles.
+    // Esto mejora la integración con Android, pero no fuerza
+    // al sistema operativo a mantener el audio en segundo plano.
+    const radio = document.getElementById("radio");
+    const estado = document.getElementById("player-status");
+
+    function actualizarEstado() {
+      if (radio.paused) {
+        estado.textContent = "Pulsa ▶ para comenzar a escuchar.";
+      } else {
+        estado.textContent = "Reproducción iniciada. ¡Gracias por sintonizarnos!";
+      }
+    }
+
+    radio.addEventListener("play", actualizarEstado);
+    radio.addEventListener("pause", actualizarEstado);
+    radio.addEventListener("error", function () {
+      estado.textContent = "No se pudo cargar la señal. Revisa tu conexión o inténtalo más tarde.";
+    });
+
+    if ("mediaSession" in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: "Radio Nueva Celestial 104.5 FM",
+        artist: "Yungas, Bolivia",
+        album: "Fe, música y esperanza",
+        artwork: [{
+          src: "https://play-lh.googleusercontent.com/121O4oSTYsB8w1zzU2OgqE0knwiz-Ewm8xrrv_o3oyNT-fXrYHicfbYqUJ_mJKgvgToDLra9ifsOSvFEokVf2N4=w240-h240-rw",
+          sizes: "240x240",
+          type: "image/jpeg"
+        }]
+      });
+
+      try {
+        navigator.mediaSession.setActionHandler("play", function () {
+          radio.play().catch(function () {});
+        });
+        navigator.mediaSession.setActionHandler("pause", function () {
+          radio.pause();
+        });
+      } catch (error) {
+        // Algunos navegadores no admiten todos los controles.
+      }
+
+      radio.addEventListener("play", function () {
+        navigator.mediaSession.playbackState = "playing";
+      });
+      radio.addEventListener("pause", function () {
+        navigator.mediaSession.playbackState = "paused";
+      });
+    }
   </script>
 </body>
 </html>
+
 
